@@ -38,8 +38,6 @@ public class ModelToDto implements Converters {
         return courseViews;
     }
 
-
-
     @Override
     public List<StudentView> studentsToStudentViews(Collection<Student> students) {
         //step1: create an empty list of view
