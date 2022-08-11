@@ -46,6 +46,9 @@ public class CourseManager implements CourseService {
 
     @Override
     public List<CourseView> searchByCourseName(String courseName) {
+        if (courseName == null || courseName.trim().equals("")){
+            throw new IllegalArgumentException("It is empty");
+        }
         Collection<Course> courses = courseDao.findByNameContains(courseName);
         List<CourseView> courseViews = converters.coursesToCourseViews(courses);
         return courseViews;
