@@ -80,7 +80,10 @@ public class StudentManager implements StudentService {
 
     @Override
     public boolean deleteStudent(int id) {
-        studentDao.removeStudent(studentDao.findById(id));
+        if (id != 0){
+            studentDao.removeStudent(studentDao.findById(id));
+            return true;
+        }
         return false;
     }
 }

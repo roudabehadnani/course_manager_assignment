@@ -78,8 +78,6 @@ public class Course {
         this.students = students;
     }
 
-
-
     public boolean enrollStudent(Student student){
         if (student == null){
             throw new IllegalArgumentException("You can not enter null");
@@ -93,7 +91,6 @@ public class Course {
         return true;
     }
 
-
     public boolean unrollStudent(Student student){
         for (Student stu: students) {
             if (stu.equals(student)){
@@ -102,9 +99,6 @@ public class Course {
         }
         return true;
     }
-
-
-
 
     @Override
     public boolean equals(Object o) {
